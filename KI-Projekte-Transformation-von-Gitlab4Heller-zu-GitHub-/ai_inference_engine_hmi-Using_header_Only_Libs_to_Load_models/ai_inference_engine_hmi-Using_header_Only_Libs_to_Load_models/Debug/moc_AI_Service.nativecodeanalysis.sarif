@@ -1,0 +1,1649 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetischer Überlauf: Wenn Sie den Operator \"+\" für einen 4-Bytewert verwenden und das Ergebnis in einen 8-Bytewert umwandeln, wandeln Sie den Wert in den breiteren Typ um, bevor Sie den Operator \"+\" verwenden, um einen Überlauf zu vermeiden (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qglobal.h"
+                },
+                "region": {
+                  "startLine": 668,
+                  "startColumn": 29,
+                  "endLine": 668,
+                  "endColumn": 33
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "qRound64",
+                  "decoratedName": "?qRound64@@YA_JM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetischer Überlauf: Wenn Sie den Operator \"+\" für einen 4-Bytewert verwenden und das Ergebnis in einen 8-Bytewert umwandeln, wandeln Sie den Wert in den breiteren Typ um, bevor Sie den Operator \"+\" verwenden, um einen Überlauf zu vermeiden (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qglobal.h"
+                },
+                "region": {
+                  "startLine": 668,
+                  "startColumn": 48,
+                  "endLine": 668,
+                  "endColumn": 73
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "qRound64",
+                  "decoratedName": "?qRound64@@YA_JM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetischer Überlauf: Wenn Sie den Operator \"-\" für einen 4-Bytewert verwenden und das Ergebnis in einen 8-Bytewert umwandeln, wandeln Sie den Wert in den breiteren Typ um, bevor Sie den Operator \"-\" verwenden, um einen Überlauf zu vermeiden (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qglobal.h"
+                },
+                "region": {
+                  "startLine": 668,
+                  "startColumn": 48,
+                  "endLine": 668,
+                  "endColumn": 66
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "qRound64",
+                  "decoratedName": "?qRound64@@YA_JM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "Arithmetischer Überlauf: Wenn Sie den Operator \"-\" für einen 4-Bytewert verwenden und das Ergebnis in einen 8-Bytewert umwandeln, wandeln Sie den Wert in den breiteren Typ um, bevor Sie den Operator \"-\" verwenden, um einen Überlauf zu vermeiden (io.2)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qglobal.h"
+                },
+                "region": {
+                  "startLine": 668,
+                  "startColumn": 88,
+                  "endLine": 668,
+                  "endColumn": 89
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "qRound64",
+                  "decoratedName": "?qRound64@@YA_JM@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Die Variable \"QVariant::Private::data\" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qvariant.h"
+                },
+                "region": {
+                  "startLine": 400,
+                  "startColumn": 9,
+                  "endLine": 400,
+                  "endColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QVariant::Private::{ctor}",
+                  "decoratedName": "??0Private@QVariant@@QAE@I@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "QVariant::Private::data"
+          }
+        },
+        {
+          "ruleId": "C26450",
+          "message": {
+            "text": "Arithmetischer Überlauf: Der Vorgang \"*\" verursacht einen Überlauf zur Kompilierzeit. Verwenden Sie einen breiteren Typ zum Speichern der Operanden (io.1)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/include/slcapdata.h"
+                },
+                "region": {
+                  "startLine": 97,
+                  "startColumn": 32,
+                  "endLine": 97,
+                  "endColumn": 45
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SL_CAP_ULL_MAX",
+                  "decoratedName": "?SL_CAP_ULL_MAX@@3_KB",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6287",
+          "message": {
+            "text": "Redundanter Code."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/include/slcapdata.inl"
+                },
+                "region": {
+                  "startLine": 226,
+                  "startColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SlCapSupplementInfo::==",
+                  "decoratedName": "??8SlCapSupplementInfo@@QBE_NABU0@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Die Variable \"QtSharedPointer::ExternalRefCountData::destroyer\" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qsharedpointer_impl.h"
+                },
+                "region": {
+                  "startLine": 146,
+                  "startColumn": 9,
+                  "endLine": 146,
+                  "endColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QtSharedPointer::ExternalRefCountData::{ctor}",
+                  "decoratedName": "??0ExternalRefCountData@QtSharedPointer@@QAE@W4Initialization@Qt@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "QtSharedPointer::ExternalRefCountData::destroyer"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Die Variable \"QUuid::data2\" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/quuid.h"
+                },
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 5,
+                  "endLine": 68,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QUuid::{ctor}",
+                  "decoratedName": "??0QUuid@@AAE@W4Initialization@Qt@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "QUuid::data2"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Die Variable \"QUuid::data3\" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/quuid.h"
+                },
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 5,
+                  "endLine": 68,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QUuid::{ctor}",
+                  "decoratedName": "??0QUuid@@AAE@W4Initialization@Qt@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "QUuid::data3"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Die Variable \"QUuid::data1\" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/quuid.h"
+                },
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 5,
+                  "endLine": 68,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QUuid::{ctor}",
+                  "decoratedName": "??0QUuid@@AAE@W4Initialization@Qt@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "QUuid::data1"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Die Variable \"QUuid::data4\" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/quuid.h"
+                },
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 5,
+                  "endLine": 68,
+                  "endColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QUuid::{ctor}",
+                  "decoratedName": "??0QUuid@@AAE@W4Initialization@Qt@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "QUuid::data4"
+          }
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "Die Funktion \"qMetaTypeId<QPair<QVariant,QVariant> >\" ist als \"constexpr\" markiert. Markieren Sie die Variable \"vid\" als \"constexpr\", wenn eine Kompilierzeitauswertung gewünscht wird (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qvariant.h"
+                },
+                "region": {
+                  "startLine": 742,
+                  "startColumn": 23,
+                  "endLine": 742,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QtPrivate::QVariantValueHelper<QPair<QVariant,QVariant> >::metaType",
+                  "decoratedName": "?metaType@?$QVariantValueHelper@U?$QPair@VQVariant@@V1@@@@QtPrivate@@SA?AU?$QPair@VQVariant@@V1@@@ABVQVariant@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "Die Funktion \"qMetaTypeId<QMap<QString,QVariant> >\" ist als \"constexpr\" markiert. Markieren Sie die Variable \"vid\" als \"constexpr\", wenn eine Kompilierzeitauswertung gewünscht wird (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qvariant.h"
+                },
+                "region": {
+                  "startLine": 742,
+                  "startColumn": 23,
+                  "endLine": 742,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QtPrivate::QVariantValueHelper<QMap<QString,QVariant> >::metaType",
+                  "decoratedName": "?metaType@?$QVariantValueHelper@V?$QMap@VQString@@VQVariant@@@@@QtPrivate@@SA?AV?$QMap@VQString@@VQVariant@@@@ABVQVariant@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "Die Funktion \"qMetaTypeId<QHash<QString,QVariant> >\" ist als \"constexpr\" markiert. Markieren Sie die Variable \"vid\" als \"constexpr\", wenn eine Kompilierzeitauswertung gewünscht wird (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qvariant.h"
+                },
+                "region": {
+                  "startLine": 742,
+                  "startColumn": 23,
+                  "endLine": 742,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QtPrivate::QVariantValueHelper<QHash<QString,QVariant> >::metaType",
+                  "decoratedName": "?metaType@?$QVariantValueHelper@V?$QHash@VQString@@VQVariant@@@@@QtPrivate@@SA?AV?$QHash@VQString@@VQVariant@@@@ABVQVariant@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "Die Funktion \"qMetaTypeId<QList<QVariant> >\" ist als \"constexpr\" markiert. Markieren Sie die Variable \"vid\" als \"constexpr\", wenn eine Kompilierzeitauswertung gewünscht wird (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qvariant.h"
+                },
+                "region": {
+                  "startLine": 742,
+                  "startColumn": 23,
+                  "endLine": 742,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QtPrivate::QVariantValueHelper<QList<QVariant> >::metaType",
+                  "decoratedName": "?metaType@?$QVariantValueHelper@V?$QList@VQVariant@@@@@QtPrivate@@SA?AV?$QList@VQVariant@@@@ABVQVariant@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "Die Funktion \"qMetaTypeId<QtMetaTypePrivate::QAssociativeIterableImpl>\" ist als \"constexpr\" markiert. Markieren Sie die Variable \"vid\" als \"constexpr\", wenn eine Kompilierzeitauswertung gewünscht wird (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qvariant.h"
+                },
+                "region": {
+                  "startLine": 742,
+                  "startColumn": 23,
+                  "endLine": 742,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QtPrivate::QVariantValueHelper<QtMetaTypePrivate::QAssociativeIterableImpl>::metaType",
+                  "decoratedName": "?metaType@?$QVariantValueHelper@VQAssociativeIterableImpl@QtMetaTypePrivate@@@QtPrivate@@SA?AVQAssociativeIterableImpl@QtMetaTypePrivate@@ABVQVariant@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "Die Funktion \"qMetaTypeId<QtMetaTypePrivate::QSequentialIterableImpl>\" ist als \"constexpr\" markiert. Markieren Sie die Variable \"vid\" als \"constexpr\", wenn eine Kompilierzeitauswertung gewünscht wird (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qvariant.h"
+                },
+                "region": {
+                  "startLine": 742,
+                  "startColumn": 23,
+                  "endLine": 742,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QtPrivate::QVariantValueHelper<QtMetaTypePrivate::QSequentialIterableImpl>::metaType",
+                  "decoratedName": "?metaType@?$QVariantValueHelper@VQSequentialIterableImpl@QtMetaTypePrivate@@@QtPrivate@@SA?AVQSequentialIterableImpl@QtMetaTypePrivate@@ABVQVariant@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "Die Funktion \"qMetaTypeId<QtMetaTypePrivate::QPairVariantInterfaceImpl>\" ist als \"constexpr\" markiert. Markieren Sie die Variable \"toId\" als \"constexpr\", wenn eine Kompilierzeitauswertung gewünscht wird (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qmetatype.h"
+                },
+                "region": {
+                  "startLine": 2413,
+                  "startColumn": 15,
+                  "endLine": 2413,
+                  "endColumn": 79
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QtPrivate::IsMetaTypePair<QPair<QVariant,QVariant>,1>::registerConverter",
+                  "decoratedName": "?registerConverter@?$IsMetaTypePair@U?$QPair@VQVariant@@V1@@@$00@QtPrivate@@SA_NH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26498",
+          "message": {
+            "text": "Die Funktion \"qMetaTypeId<QtMetaTypePrivate::QPairVariantInterfaceImpl>\" ist als \"constexpr\" markiert. Markieren Sie die Variable \"vid\" als \"constexpr\", wenn eine Kompilierzeitauswertung gewünscht wird (con.5)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qvariant.h"
+                },
+                "region": {
+                  "startLine": 742,
+                  "startColumn": 23,
+                  "endLine": 742,
+                  "endColumn": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "QtPrivate::QVariantValueHelper<QtMetaTypePrivate::QPairVariantInterfaceImpl>::metaType",
+                  "decoratedName": "?metaType@?$QVariantValueHelper@VQPairVariantInterfaceImpl@QtMetaTypePrivate@@@QtPrivate@@SA?AVQPairVariantInterfaceImpl@QtMetaTypePrivate@@ABVQVariant@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.36.32534.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qglobal.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "e6f75ead5db1a0950009a37fb9e37bf6b29fefb57d32c7b47380368d8164ce05"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qvariant.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "03fd691266d552eef9f812088c790cd937ca810b2199cf9060b789295caabf4a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///S:/include/slcapdata.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "d3106c927bc9c29730776fbb84d708e9300dc4c9c5c054943fa93ef4f3d034cd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///S:/include/slcapdata.inl"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "c6a2786f17541de7eaf304a9e6a66338c46755323389b3e2d431aab98f3de272"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qsharedpointer_impl.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "a3b73615f70c1fca72c9b2c0439658edee1516fcee4c4439ee7448c5b1843d9d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/quuid.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "4c5fe7d9de6793e342db5be608a5592df58194a53d54d333d0d1cc3153bc1154"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///S:/hmisl/siemens/sinumerik/hmi/osal/qt/include/QtCore/qmetatype.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "d435577b4eeb788291598526cbda5c0ab63e96f2766a0532fca9e231416f72e6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/workdir/slextracesvr/generatedfiles/moc_ai_service.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "09d2340ca1fe8f45e7c7f0720e937db84e9df5d1339beedf91510d123c999846"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/workdir/slextracesvr/ai_service.h"
+          },
+          "hashes": {
+            "sha-256": "40a78250b78045f86c012ac9f21597bbfc39fb77c550454c6ba673ba8768fd29"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/workdir/slextracesvr/control_unit_utilities/control_unit_handler.h"
+          },
+          "hashes": {
+            "sha-256": "484b2c0d6d272b8e265c1fb0e1618da0e5cd2744c64eca4d879184c5173e15be"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qobject"
+          },
+          "hashes": {
+            "sha-256": "9ead97a325d713b2ef77aa29c9eca5b6955cc8f433438febcc6044d2955307c9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qobject.h"
+          },
+          "hashes": {
+            "sha-256": "62f1548f2845304e67936dbe0627194ed2ec4832441e77acfb08aa8e4e605fa7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qobjectdefs.h"
+          },
+          "hashes": {
+            "sha-256": "3f366360471e9575488cce4f8cbebe0a750ab18bc3d63c3df9a31f24c034f9c9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qnamespace.h"
+          },
+          "hashes": {
+            "sha-256": "bec9cfbd2bf17319163b8c275b366f48e24b3a0b193f1ebbf7b378c4d7c78a04"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qconfig.h"
+          },
+          "hashes": {
+            "sha-256": "ab69147ad7beae5f9a261684bb0a438117b459e0ad41aa9f7f9173b2b06ab5a6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qtcore-config.h"
+          },
+          "hashes": {
+            "sha-256": "c7b175732c386e8dd02b82b7f85f6224db9ca1f3904cc8a5ee4d2ba47d8ddff7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qsystemdetection.h"
+          },
+          "hashes": {
+            "sha-256": "2bb2537fa5fe5766f1b4937484e2ba7b118db994ad9357d29020b38fed2a3514"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qprocessordetection.h"
+          },
+          "hashes": {
+            "sha-256": "b063b5a5e514ccdd18864df0c07d477495aa2fde425f0156318f532146390cba"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qcompilerdetection.h"
+          },
+          "hashes": {
+            "sha-256": "dc27a281a7015dac3f907406908ae7b5c69c85b1c6c48e0ec26f235277893f12"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qtypeinfo.h"
+          },
+          "hashes": {
+            "sha-256": "c080c9aa075642fefc2fec752b788e119129ae9afaebe6b8a240d313a57552b6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qsysinfo.h"
+          },
+          "hashes": {
+            "sha-256": "31870610874b1df3fb38d5afa83ec5a773555beb83c59dba9620219d515aa980"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qlogging.h"
+          },
+          "hashes": {
+            "sha-256": "bed99ffe25b9e900318fadefb8506e7aae1821657f0599b6e4da2645c5df51a8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qflags.h"
+          },
+          "hashes": {
+            "sha-256": "7bb464aa677e9d36e599502c481e44b4ac74509f7d3cd2d8ab5c085fd2ea3184"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qatomic.h"
+          },
+          "hashes": {
+            "sha-256": "40f0066b3eccc4d2e3f301b73a9ad60a795d1fe07d8f74a8e472dd60f12c00c8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qbasicatomic.h"
+          },
+          "hashes": {
+            "sha-256": "027b1cd5613916cfc1d8669095b0fc9374b9f821b7729fdcd89c67b8b4487c40"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qatomic_cxx11.h"
+          },
+          "hashes": {
+            "sha-256": "d4430504cf4b5a1cefbc6fd8ecfb083675e860eaf82b3eb43fe8c38ee22aa9de"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qgenericatomic.h"
+          },
+          "hashes": {
+            "sha-256": "6c1add1b9a469a023306af9b11b88938f6b7a7571d7eb5822a4c539b4ec00627"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qglobalstatic.h"
+          },
+          "hashes": {
+            "sha-256": "c1bb66d9f7ae604aafd176c318cfd5c2248709c44c2c75312a1c70201a3c3bc6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qnumeric.h"
+          },
+          "hashes": {
+            "sha-256": "b42acff6ea8ae2760e8e6f3c2d98a09eb5dcc0afb3255040158da8558ccb6603"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qversiontagging.h"
+          },
+          "hashes": {
+            "sha-256": "d842a2288e412f8372531e3a8067c4ce00397ed7c5bc1601157077b6b7bf7cb7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qobjectdefs_impl.h"
+          },
+          "hashes": {
+            "sha-256": "28ca21cc25512af45aaa6b8bb58f58773f1afe3f3692c3cf3278c53f6f2472ac"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qstring.h"
+          },
+          "hashes": {
+            "sha-256": "265d28d2eb9620227d42edd05fb98fea88180ba28f7027c6c13e35c1d6c3ad19"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qchar.h"
+          },
+          "hashes": {
+            "sha-256": "c57bc9c15dd6e29c6325dcd85148e95b81c14081c425d2e8e64e1bc99936fb08"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qbytearray.h"
+          },
+          "hashes": {
+            "sha-256": "878af3305115ef3d892f077f79a70774fe21ec9a656e6dbf9dcc96bad8fd78b8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qrefcount.h"
+          },
+          "hashes": {
+            "sha-256": "861ae75f420f2f6409dca3d3a6573410e21dfdf87477d6a4dae3c39c549e3398"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qarraydata.h"
+          },
+          "hashes": {
+            "sha-256": "412ca9d5690a216ff6a3072d87e286535cf3f20481463392342d0aa668e67c60"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qstringliteral.h"
+          },
+          "hashes": {
+            "sha-256": "4ded469e76c3b4038bea1e456354d2f620ed9962f7b91d44a94a16f58814275f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qstringalgorithms.h"
+          },
+          "hashes": {
+            "sha-256": "89f6c8e8c208fe19158493587b8d7f0fefb1ccd4b50682de888131262a371f7b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qstringview.h"
+          },
+          "hashes": {
+            "sha-256": "97128ecc038c89b766a3e343fab2eb9768c8b26be63e5d034af7dcdda3276430"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qlist.h"
+          },
+          "hashes": {
+            "sha-256": "4a59e52a2dd9c8c73cf08753af1e86d15907a2dbac19199ab710977fca63156d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qalgorithms.h"
+          },
+          "hashes": {
+            "sha-256": "63817cc2fbc48b03e799528f70335d690d56378addcad0c28b35fb741b178616"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qiterator.h"
+          },
+          "hashes": {
+            "sha-256": "72d298cab30efbd5c079a68c56c243184bf08fc4b4c113a5aa6271d86d217639"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qhashfunctions.h"
+          },
+          "hashes": {
+            "sha-256": "a0a9f5b90428531e216af0544b1a40d7af44e7761ac08ed8b4d00f87f487f7b3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qpair.h"
+          },
+          "hashes": {
+            "sha-256": "2a12ec31d17433cc27c110ca99c2bba1bb690ecd1f2259d99f61574c133cf522"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qvector.h"
+          },
+          "hashes": {
+            "sha-256": "08fd8c2a7c9516046f34ce034e625587204381ce6815073980a9ef94f88421b3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qcontainertools_impl.h"
+          },
+          "hashes": {
+            "sha-256": "53d39e5b5364ec8775b2442c2f4debd3d0b73c3a60f65d868becae214afdbba0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qpoint.h"
+          },
+          "hashes": {
+            "sha-256": "f258371b04f27a2dc305b00f6b6efbae269a0730281245c5684b197fbac1428c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qbytearraylist.h"
+          },
+          "hashes": {
+            "sha-256": "544e58920b65623e4b6196f77138714729fc394a811001f29625be033796f9f8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qstringlist.h"
+          },
+          "hashes": {
+            "sha-256": "058036c601a8ae4cbd762d1dbaaa463f3914b300fb8bb31b5f902474bd9d6e94"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qregexp.h"
+          },
+          "hashes": {
+            "sha-256": "1e650c4212d9d4db720c13234db3da68d41bacd9bd9e81939d85cdfd2a786309"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qstringmatcher.h"
+          },
+          "hashes": {
+            "sha-256": "d3d6a69bb29d36d50055ab7350d8eab6473edeac6e48d331e40ff209ae7b9e61"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qscopedpointer.h"
+          },
+          "hashes": {
+            "sha-256": "6db72cc944752eece8d11b606f5840a83c05095e1bd744a4e6e3f9c36b27a520"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qvarlengtharray.h"
+          },
+          "hashes": {
+            "sha-256": "208dd4943174c1ddf51fd21a417f2eedf102e80370939be5ab054f406febcb90"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qcontainerfwd.h"
+          },
+          "hashes": {
+            "sha-256": "186a49621a35f9c74741b6238ecb902e37e7a2f9360e8dcbd947323a1257e813"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qobject_impl.h"
+          },
+          "hashes": {
+            "sha-256": "4b9da11ecad03a8bcf42b7e4bf6783154a63be31fdb2100404b53343e6b13478"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qtextstream"
+          },
+          "hashes": {
+            "sha-256": "6e825cbb9377e6b1e0db684e8cc965bde8f7572f8bd885da063056c9fb7226a9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qtextstream.h"
+          },
+          "hashes": {
+            "sha-256": "9cb576319606a01abc7f1cd8d3619cb4c6243d29c0a7b0611a117668668bd35b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qiodevice.h"
+          },
+          "hashes": {
+            "sha-256": "72683bde6c7526cc1a4a7663d3ef8d3c975a7d40f657354fbfcee81df8e8ca02"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qlocale.h"
+          },
+          "hashes": {
+            "sha-256": "ba43a733f090e48cd6610a560688344fe066640e19870e0f9c9a015a05e34923"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qmap.h"
+          },
+          "hashes": {
+            "sha-256": "c50b4f85bb4f6037be77408c580274e02cca2427242cfc9c7c26d28ea146c748"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qhash.h"
+          },
+          "hashes": {
+            "sha-256": "2ebd091c0cd8d70353474e27c44e404787f8e0e7d34c745151b5241773ab1d85"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qshareddata.h"
+          },
+          "hashes": {
+            "sha-256": "8a8b67b424c55a967c77c192aa7b7827abc8be8c2f3a78b7d7a40e7eccdcd997"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/include/slqcap.h"
+          },
+          "hashes": {
+            "sha-256": "9c6bf2dafe4ca2d19908c353884289336ba66d94f8a86b0272c58b2cde8192cc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/ace/ace/config.h"
+          },
+          "hashes": {
+            "sha-256": "21ee55b41e14911f7c2d4f5dfaee7da1e95c09f0f9473d6e83f45e3e87fa622c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/ace/ace/config-win32.h"
+          },
+          "hashes": {
+            "sha-256": "06138757b765ff635a4b432b428b9833636d9970c20b7c9262c01a0439983914"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/ace/ace/pre.h"
+          },
+          "hashes": {
+            "sha-256": "01f5d86be1a2514aa9b128c9d1606b87da39121f4e223a132f3c5c726a7e6828"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/ace/ace/config-win32-common.h"
+          },
+          "hashes": {
+            "sha-256": "5cc8469c04af9c893ba63e5b75bd6247147e3c72b1f43fc280651dcb3459bf1a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/ace/ace/post.h"
+          },
+          "hashes": {
+            "sha-256": "9be7d02a2e9d716945f08cc559ef5c3606534d76cee5507df2eb8fe849e3ea29"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/ace/ace/config-win32-msvc.h"
+          },
+          "hashes": {
+            "sha-256": "c73f0f8c68ec635f666dd2f4f89738c50808edbc36ed78d5cfa87266b2eac0f9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/ace/ace/config-win32-msvc-141.h"
+          },
+          "hashes": {
+            "sha-256": "6ca1b8d2597f8bdedc1b000d6744503041fbd8a8c3037e52cc8e61821e71323b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/ace/ace/config-win32-msvc-14.h"
+          },
+          "hashes": {
+            "sha-256": "d5ed780647751d9b58124351b5942a395a8c35f1d49745ffe7636cd060f4d0f2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/ace/ace/config-win32-msvc-12.h"
+          },
+          "hashes": {
+            "sha-256": "09cb39b8541ce477c57a9319b54f8ee62ee0709aefbcf6a2043b4473a17a451f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/ace/ace/config-win32-msvc-11.h"
+          },
+          "hashes": {
+            "sha-256": "52a2f4f471aaffe32c8ebddc88c6c227aab67fddc9951520d2b7f46651cdcf8f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/ace/ace/config-win32-msvc-10.h"
+          },
+          "hashes": {
+            "sha-256": "2346ee01d9d1df77bacd743d00011b1d3c2ca0b43be660d914b8d3ef1b20a41e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/ace/ace/slacecompatmakros.h"
+          },
+          "hashes": {
+            "sha-256": "974412a6d01182fcce9a4518223661c716d120f4019d3abac7996857600b3f8e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/include/opcaedef.h"
+          },
+          "hashes": {
+            "sha-256": "980ce40f35e350668a0c5af21c324c3d6d3b99de982952ef5d54f3dd9fa2d32f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/include/slerror.h"
+          },
+          "hashes": {
+            "sha-256": "dc47507d899ea601ac04c1301d647192c4fc0ad32a5783e2191d6b82b215e2bc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/include/slhmitemplatesqt.h"
+          },
+          "hashes": {
+            "sha-256": "c340634961db2f6fd786d1f6fd094a2da0977abeba627205aecb4402764ade3f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qlist"
+          },
+          "hashes": {
+            "sha-256": "a73ae5eb70322e7900c45b714717e58650673cfe4e419f1fcd96c86135266955"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qvector"
+          },
+          "hashes": {
+            "sha-256": "82e17649af66e33d79af3343f0ec08c963d5d544a19a949db016b2f0ea926e6d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qmap"
+          },
+          "hashes": {
+            "sha-256": "30ba0d6814d11f6f9dc60bd2e432ee8b46d24d07469ff5c67e101fb9e6b6f126"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qhash"
+          },
+          "hashes": {
+            "sha-256": "8938a8b2b8c8804d2060a74e367eab3642a5ca530fea04ef70e07e3e88fd1785"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qset"
+          },
+          "hashes": {
+            "sha-256": "541caa9643147aba27dfe3dc083b78af50946dec8596b7efe594dc61a97ed0c2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qset.h"
+          },
+          "hashes": {
+            "sha-256": "a0d3c85443492fc7c26f605668685e64b484a8ea8c00988d3ace161e30bdfd4f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qstring"
+          },
+          "hashes": {
+            "sha-256": "a6353bc5ad6e5c14388c86411176332a8f2131ddf75f545db6fd950f01042fea"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qvariant"
+          },
+          "hashes": {
+            "sha-256": "2b6fcb03057f0d49a3c77823d6a6101b58550a09ab7c624053bd89fd452062a5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qsize"
+          },
+          "hashes": {
+            "sha-256": "39e2b4045c2c5fe1d95f5f71a957e12544db903af8845a30c1ace3722c666ff1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qsize.h"
+          },
+          "hashes": {
+            "sha-256": "f64b9c2dedee5ee7b4e58913b702604874f95470f14216cdb3a33a92350f45ff"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qmargins.h"
+          },
+          "hashes": {
+            "sha-256": "469871e541e81069ad947902a176b01817687f56fe1bf33d7d3a9c5a9afef61b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/include/slhmievents.h"
+          },
+          "hashes": {
+            "sha-256": "0221b539e078dbcfd49bcb7771de9536aaddf203f284209d16da1c374b4ecd6e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qevent"
+          },
+          "hashes": {
+            "sha-256": "642b176a0d6c178976be4111acb81e6b45d2dad15ac3479686aee2d2556ccd24"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qcoreevent.h"
+          },
+          "hashes": {
+            "sha-256": "a0be1be49efbeca2ea3f7c946b7881ec84f588f99cf52e535dcf8d7dd1d7c527"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qdatetime"
+          },
+          "hashes": {
+            "sha-256": "2b247b676e464e801fc2d46ff2a1187f1cbd80b37dbb39f9bf2e2b11becadae8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qdatetime.h"
+          },
+          "hashes": {
+            "sha-256": "716259363375bac208b6e184fb759abb41dc8ecb028c81bf2623678606246524"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qstringlist"
+          },
+          "hashes": {
+            "sha-256": "df3d6c7baeaaa8b2c403799e6b516d12e63891ed66de05e02a7fa121362b2c92"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/include/slcapenum.h"
+          },
+          "hashes": {
+            "sha-256": "0c8fb57f0cbb7f1932396779983f9fa5b81a15f84c30fc9def23affd8203d031"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/include/slqcaphandle.h"
+          },
+          "hashes": {
+            "sha-256": "d3b49dc4a59b2f82ea997462e483acb7c60df4593578813b210811b70855cdc1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/workdir/slextracesvr/models/configs.h"
+          },
+          "hashes": {
+            "sha-256": "26937d4745c208ca35de6852160bd634bf42642b2f78c700bd335eac361394e8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/workdir/slextracesvr/models/asset.h"
+          },
+          "hashes": {
+            "sha-256": "728e710f16f6e656b9b0cb3114e6228fa6c37763e8571319e4641707a2fca5fa"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/workdir/slextracesvr/assets_utilities/assets_handler.h"
+          },
+          "hashes": {
+            "sha-256": "38a81877fd6630ae8b7200259218d7651f3beafd05e7a33148702d0c7cfef5fb"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qfileinfo"
+          },
+          "hashes": {
+            "sha-256": "550341f3c56acac22e2868bfd25197c5193c8507199b209610f87c9ed1a385ce"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qfileinfo.h"
+          },
+          "hashes": {
+            "sha-256": "a689b7a584b18cbca5221f8f088ac4c6ea0b6a8a8985d4c72dd3db2a9653f488"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qfile.h"
+          },
+          "hashes": {
+            "sha-256": "88dbf4f27e90712538638d3e71d41f653eb53ea29a3bf341ca799be23894d65d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qfiledevice.h"
+          },
+          "hashes": {
+            "sha-256": "6e071320c2971fd1eeb634d46150f083aa2411fee3323ac307b42bfa71e1d9e5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/workdir/slextracesvr/assets_utilities/json_handler.h"
+          },
+          "hashes": {
+            "sha-256": "1703236fe56eaa57869a070fe4b47c4ddaf96270419bbe5d31e190381d1e5e1a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qjsondocument"
+          },
+          "hashes": {
+            "sha-256": "2eec12c07ecf17e282a5b2463a70d444b0e3196fd0763e9ee7bb0219602fd9b3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qjsondocument.h"
+          },
+          "hashes": {
+            "sha-256": "4420ac518b16d76a4a47e6722a3776fd76825cf344d28c47abf75cda9bc20232"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qjsonvalue.h"
+          },
+          "hashes": {
+            "sha-256": "9dd68258e7ed79f2577112f23d01424c456fe1e6704a9c1c75023717174489a7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qcborvalue.h"
+          },
+          "hashes": {
+            "sha-256": "e8ff5efa2a6fcf244259d2e3868e9915bec20b56c173831a8fd38d1733419f1d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qcborcommon.h"
+          },
+          "hashes": {
+            "sha-256": "ce444aa2a8728945e4b1a7e290669ab2c4660e89f5c2dc4e847746a552d67a33"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qdebug.h"
+          },
+          "hashes": {
+            "sha-256": "cc71aeef20c377a76e2d4cebf6fd3e4c6e09d1a41f10e643c9449c81bde673b9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qcontiguouscache.h"
+          },
+          "hashes": {
+            "sha-256": "920cf052861d13fa638dc2e6e948bb18cc96039c6f3c56fbd5d693d28cc110b7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qsharedpointer.h"
+          },
+          "hashes": {
+            "sha-256": "041137d67484b80662b9e771e1e17d3da8912f702157f389cef124da1e0ffd34"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qregularexpression.h"
+          },
+          "hashes": {
+            "sha-256": "166e2b85f3f6baacced2ba1782f2deb9d6635c183974d11e2e02fa95ca580b5a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qurl.h"
+          },
+          "hashes": {
+            "sha-256": "216d955bbb9a7dae1e7b9b42e32678400c5b948169180de6b31271ef710a013d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qjsonobject"
+          },
+          "hashes": {
+            "sha-256": "7df669c85c81cff3e7c50e89368670f904d8785c4dd758a2fff2b016895f4bf6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qjsonobject.h"
+          },
+          "hashes": {
+            "sha-256": "e13eaa0beb6bdebc9cdc56ff819a2c00a9f9e545a1a879f3836539ffb0a288b9"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qjsonarray"
+          },
+          "hashes": {
+            "sha-256": "db0e7cdfcd55d7546c0564de3e6e6b30298367a082830718088405c83ec3ec31"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qjsonarray.h"
+          },
+          "hashes": {
+            "sha-256": "7cb2f34aeb465251fc822c8a74411f4155d1bcf166a16b1e510493b8a30994e8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/workdir/slextracesvr/models/model.h"
+          },
+          "hashes": {
+            "sha-256": "730042302d91dcf04093892f4c3a6fe873b22e8a2d6d4400bfa520d6c4003e4f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/workdir/slextracesvr/assets_utilities/onnx_handler.h"
+          },
+          "hashes": {
+            "sha-256": "d3470e2afef477fa3c8c0ee4bd2989355166174bd70ef7f4541649f871709b6f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/workdir/slextracesvr/onnxruntime/core/session/onnxruntime_cxx_api.h"
+          },
+          "hashes": {
+            "sha-256": "6397db64e28482ec085d47c362f7d2cc7116b0cc4d2c218060bee2181f2be5bc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/workdir/slextracesvr/onnxruntime/core/session/onnxruntime_c_api.h"
+          },
+          "hashes": {
+            "sha-256": "cfa6e9fcf7750d386f94a0b1c3bc3ac062f9ccdff51490154bcd9243a82f1f91"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/workdir/slextracesvr/onnxruntime/core/session/onnxruntime_cxx_inline.h"
+          },
+          "hashes": {
+            "sha-256": "e606c6f97279e234e803fa38275b632956327cfc2b57d4cf927d10a78d373d53"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qthread"
+          },
+          "hashes": {
+            "sha-256": "eefa6b75da0552c65a8853e0c3ac15a29a912009955bb45bef6f2371a7b712de"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qthread.h"
+          },
+          "hashes": {
+            "sha-256": "1f3f94d93b3ff8b9885ec6279c0284d3a1748a9dcce02f56ffaea0db30a01508"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qdeadlinetimer.h"
+          },
+          "hashes": {
+            "sha-256": "52360aa6b2eff1cfa3b64faab67cddf046269ea9dbaa9554411c71d3ec6ac55e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///s:/hmisl/siemens/sinumerik/hmi/osal/qt/include/qtcore/qelapsedtimer.h"
+          },
+          "hashes": {
+            "sha-256": "83b80952d53084e2349809c1306846ff3ca0697e2ff525fa19dbc095a455c555"
+          }
+        }
+      ]
+    }
+  ]
+}

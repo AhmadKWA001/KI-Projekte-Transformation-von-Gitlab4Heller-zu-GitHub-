@@ -1,0 +1,47 @@
+﻿  MOCing log.h...
+  MOCing Assets_Handler.h...
+  MOCing Json_Handler.h...
+  MOCing Asset.h...
+  MOCing Configs.h...
+  MOCing Model.h...
+  MOCing Control_Unit_handler.h...
+  MOCing Fdeep_handler.h...
+  Copy  "Z:\SharedFolder\SlExTraceSvr\systemconfiguration.ini" "Z:\SharedFolder\SlExTraceSvr\Debug\Output\appl\systemconfiguration.ini"
+          1 Datei(en) kopiert.
+  AI_Service.cpp
+  moc_AI_Service.cpp
+  moc_slextracesvrform.cpp
+  Assets_Handler.cpp
+  Fdeep_handler.cpp
+z:\sharedfolder\slextracesvr\assets_utilities\fdeep_handler.cpp(25): warning C4101: "e": Unreferenzierte lokale Variable
+z:\sharedfolder\slextracesvr\assets_utilities\fdeep_handler.cpp(58): warning C4101: "e": Unreferenzierte lokale Variable
+z:\sharedfolder\slextracesvr\assets_utilities\fdeep_handler.cpp(80): warning C4101: "e": Unreferenzierte lokale Variable
+  moc_Assets_Handler.cpp
+  moc_Fdeep_handler.cpp
+  moc_Json_Handler.cpp
+  Json_Handler.cpp
+z:\sharedfolder\slextracesvr\assets_utilities\json_handler.cpp(46): warning C4101: "e": Unreferenzierte lokale Variable
+z:\sharedfolder\slextracesvr\assets_utilities\json_handler.cpp(57): warning C4101: "e": Unreferenzierte lokale Variable
+  Control_Unit_handler.cpp
+  moc_Control_Unit_handler.cpp
+  Asset.cpp
+  Configs.cpp
+  moc_Asset.cpp
+  moc_Configs.cpp
+  moc_Model.cpp
+  Model.cpp
+  slextracesvrform.cpp
+  slextracesvrplugin.cpp
+  slexversion.cpp
+  Code wird generiert...
+  Kompilieren...
+  moc_log.cpp
+  log.cpp
+z:\sharedfolder\slextracesvr\utilities\log.cpp(152): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1469): note: Siehe Deklaration von "vsprintf"
+  Code wird generiert...
+     Bibliothek "S:\hmisl\lib\slextracesvrdialog.lib" und Objekt "S:\hmisl\lib\slextracesvrdialog.exp" werden erstellt.
+  SlExTraceSvr.vcxproj -> Z:\SharedFolder\SlExTraceSvr\Debug\Output\appl\slextracesvr.dll
+          1 Datei(en) kopiert.
+          1 Datei(en) kopiert.
+          1 Datei(en) kopiert.

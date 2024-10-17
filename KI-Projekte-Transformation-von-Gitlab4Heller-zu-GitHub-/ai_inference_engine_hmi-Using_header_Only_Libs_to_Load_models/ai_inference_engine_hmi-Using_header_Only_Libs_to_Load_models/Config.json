@@ -1,0 +1,25 @@
+{
+  "model_input_shape": [1,40,4],
+  "model_output_shape": [1],
+  "input_signals": [
+    "I_MOMENT_G",
+    "T_LAGER",
+    "T_MOTOR",
+    "DRZ5"
+  ],
+  "cov_matrix": [ -0.09138720192689445, 0.6550774073523761,0.6104581118277835,-0.43573255949506495, 0.9570279055543719,0.12404310969148105,0.1589420817215908,0.20844258102961402,-0.2735097376698204,0.13302049175250308,0.42489503756994274,0.8526207710478007,0.030633163629830075,-0.73334333438607, 0.6492630556331555, -0.19931544793981],
+  "cov_matrix_shape": [4,4],
+  "model_path": "S:/hmisl/oem/sinumerik/hmi/appl/model.json",
+  "preprocessor_path": "S:/hmisl/oem/sinumerik/hmi/appl/preprocessor.json",
+  "prediction_address": "/NCK/State/aDbr[2300]",
+  "addresses": {
+    "I_MOMENT_G": "DB2015.DBD254:REAL",
+	"T_LAGER": "MW3232",
+    "T_MOTOR": "DB2015.DBD250:REAL",
+    "DRZ5": "/Channel/Spindle/actSpeed[u1,2]"
+  },
+  "time_relevance": 5,
+  "recording_Frequency": 5,
+  "sleeping_period": 1.5,
+  "response_time": 5
+}

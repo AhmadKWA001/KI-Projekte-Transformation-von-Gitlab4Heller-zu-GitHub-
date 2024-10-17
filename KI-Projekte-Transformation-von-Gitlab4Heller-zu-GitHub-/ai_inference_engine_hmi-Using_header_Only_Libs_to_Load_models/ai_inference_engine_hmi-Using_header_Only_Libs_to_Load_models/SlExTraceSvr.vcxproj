@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <TrackFileAccess>false</TrackFileAccess>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>slextracesvr</ProjectName>
+    <ProjectGuid>{B3D81377-6732-4C51-B481-4EF0766E0022}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CLRSupport>false</CLRSupport>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.24730.2</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\Output\appl\</OutDir>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+    <ExcludePath>$(CommonExcludePath);$(VC_ExecutablePath_x86);$(VC_LibraryPath_x86)</ExcludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\Output\appl\</OutDir>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>IF EXIST "$(ProjectDir)$(Configuration)\Output\cfg" GOTO EndCfg:
+mkdir "$(ProjectDir)$(Configuration)\Output\cfg"
+:EndCfg
+
+IF EXIST "$(ProjectDir)$(Configuration)\Output\hlp" GOTO EndHlp:
+mkdir "$(ProjectDir)$(Configuration)\Output\hlp"
+:EndHlp
+
+IF EXIST "$(ProjectDir)$(Configuration)\Output\lng" GOTO EndLng:
+mkdir "$(ProjectDir)$(Configuration)\Output\lng"
+:EndLng
+</Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/slextracesvrdialog.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\utilities;$(MSBuildProjectDirectory)\dependencies;$(MSBuildProjectDirectory)\control_unit_utilities;$(MSBuildProjectDirectory)\models;$(MSBuildProjectDirectory)\assets_utilities;$(HMI_SL_PP_SUBST)include;$(HMI_SL_PP_SUBST)gui\include;$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\include\QtCore;$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\include;$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\ace;$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\ace\TAO;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>QT_NO_DEPRECATED_WARNINGS;_DEBUG;WIN32;_WINDOWS;_USRDLL;QT_DLL;QT_THREAD_SUPPORT;QT_SHARED;QT_ACCESSIBILITY_SUPPORT;QT_PLUGIN;SL_MODULE=slextracesvr;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <AdditionalOptions>/bigobj</AdditionalOptions>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(LIBQT_CORE_RELEASE);$(LIBQT_GUI_RELEASE);$(LIBQT_XML_RELEASE);$(LIBQT_WIDGETS_RELEASE);slgfw.lib;slgfwwidget.lib;slcap.lib;sltrc.lib;sltrp.lib;slhmiutilitieslib.lib;slaesvcadapter.lib;slfsfilesvcadapter.lib;sltraceadapter.lib;slarchiveadapter.lib;slmd.lib;slgrgrid.lib;slmaforms.lib;slgfwmanager.lib;slgraphwidget.lib;slcncversioninfo.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(ProjectDir)$(Configuration)\Output\appl\slextracesvr.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\ace\lib;$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\lib;$(HMI_SL_PP_SUBST)hmisl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/slextracesvrdialog.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(HMI_SL_PP_SUBST)hmisl\lib\slextracesvrdialog.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AssemblyDebug>true</AssemblyDebug>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "$(HMI_SL_PP_SUBST)hmisl\oem\sinumerik\hmi\appl"
+copy "$(TargetDir)slextracesvrdialog.hmi" "$(HMI_SL_PP_SUBST)hmisl\oem\sinumerik\hmi\appl"
+copy "$(TargetDir)sample.xml" "$(HMI_SL_PP_SUBST)hmisl\oem\sinumerik\hmi\appl"</Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <OutputFile>.\$(Configuration)\$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>IF EXIST "$(ProjectDir)$(Configuration)\Output\cfg" GOTO EndCfg:
+mkdir "$(ProjectDir)$(Configuration)\Output\cfg"
+:EndCfg
+
+IF EXIST "$(ProjectDir)$(Configuration)\Output\hlp" GOTO EndHlp:
+mkdir "$(ProjectDir)$(Configuration)\Output\hlp"
+:EndHlp
+
+IF EXIST "$(ProjectDir)$(Configuration)\Output\lng" GOTO EndLng:
+mkdir "$(ProjectDir)$(Configuration)\Output\lng"
+:EndLng
+</Command>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/slextracesvrdialog.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(HMI_SL_PP_SUBST)include;$(HMI_SL_PP_SUBST)gui\include;$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\include\qt;$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\include;$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\ace;$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\ace\TAO;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>QT_NO_DEPRECATED_WARNINGS;_RELEASE;WIN32;_WINDOWS;_USRDLL;QT_DLL;QT_THREAD_SUPPORT;QT_SHARED;QT_ACCESSIBILITY_SUPPORT;QT_PLUGIN;SL_MODULE=slextracesvr;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(LIBQT_CORE_RELEASE);$(LIBQT_GUI_RELEASE);$(LIBQT_XML_RELEASE);$(LIBQT_WIDGETS_RELEASE);slgfw.lib;slgfwwidget.lib;slcap.lib;sltrc.lib;sltrp.lib;slhmiutilitieslib.lib;slaesvcadapter.lib;slfsfilesvcadapter.lib;sltraceadapter.lib;slarchiveadapter.lib;slmd.lib;slgrgrid.lib;slmaforms.lib;slgfwmanager.lib;slgraphwidget.lib;slcncversioninfo.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(ProjectDir)$(Configuration)\Output\appl\slextracesvr.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\ace\lib;$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\lib;$(HMI_SL_PP_SUBST)hmisl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Release/slextracesvrdialog.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(HMI_SL_PP_SUBST)hmisl\lib\slextracesvrdialog.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "$(HMI_SL_PP_SUBST)hmisl\oem\sinumerik\hmi\appl"
+copy "$(TargetDir)slextracesvrdialog.hmi" "$(HMI_SL_PP_SUBST)hmisl\oem\sinumerik\hmi\appl"
+copy "$(TargetDir)sample.xml" "$(HMI_SL_PP_SUBST)hmisl\oem\sinumerik\hmi\appl"
+</Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <OutputFile>.\$(Configuration)\$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AI_Service.cpp" />
+    <ClCompile Include="assets_utilities\Assets_Handler.cpp" />
+    <ClCompile Include="assets_utilities\Fdeep_handler.cpp" />
+    <ClCompile Include="assets_utilities\GeneratedFiles\moc_Assets_Handler.cpp" />
+    <ClCompile Include="assets_utilities\GeneratedFiles\moc_Fdeep_handler.cpp" />
+    <ClCompile Include="assets_utilities\GeneratedFiles\moc_Json_Handler.cpp" />
+    <ClCompile Include="assets_utilities\Json_Handler.cpp" />
+    <ClCompile Include="control_unit_utilities\Control_Unit_handler.cpp" />
+    <ClCompile Include="control_unit_utilities\GeneratedFiles\moc_Control_Unit_handler.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_AI_Service.cpp" />
+    <ClCompile Include="GeneratedFiles\moc_slextracesvrform.cpp" />
+    <ClCompile Include="models\Asset.cpp" />
+    <ClCompile Include="models\Configs.cpp" />
+    <ClCompile Include="models\GeneratedFiles\moc_Asset.cpp" />
+    <ClCompile Include="models\GeneratedFiles\moc_Configs.cpp" />
+    <ClCompile Include="models\GeneratedFiles\moc_Model.cpp" />
+    <ClCompile Include="models\Model.cpp" />
+    <ClCompile Include="slextracesvrform.cpp" />
+    <ClCompile Include="slextracesvrplugin.cpp" />
+    <ClCompile Include="slexversion.cpp" />
+    <ClCompile Include="utilities\GeneratedFiles\moc_log.cpp" />
+    <ClCompile Include="utilities\log.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utilities\slextracesvrdefines.h" />
+    <CustomBuild Include="utilities\log.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)generatedfiles/moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOCing %(Filename)%(Extension)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="assets_utilities\Assets_Handler.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)generatedfiles/moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOCing %(Filename)%(Extension)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+    <CustomBuild Include="assets_utilities\Json_Handler.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)generatedfiles/moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOCing %(Filename)%(Extension)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+    <CustomBuild Include="AI_Service.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)generatedfiles/moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOCing %(Filename)%(Extension)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+    <CustomBuild Include="models\Asset.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)generatedfiles/moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOCing %(Filename)%(Extension)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+    <CustomBuild Include="models\Configs.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)generatedfiles/moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOCing %(Filename)%(Extension)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+    <CustomBuild Include="models\Model.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)generatedfiles/moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOCing %(Filename)%(Extension)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+    <CustomBuild Include="control_unit_utilities\Control_Unit_handler.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)generatedfiles/moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOCing %(Filename)%(Extension)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+    <CustomBuild Include="assets_utilities\Fdeep_handler.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)generatedfiles/moc_%(Filename).cpp"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOCing %(Filename)%(Extension)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+    <ClInclude Include="dependencies\Eigen\src\Cholesky\LDLT.h" />
+    <ClInclude Include="dependencies\Eigen\src\Cholesky\LLT.h" />
+    <ClInclude Include="dependencies\Eigen\src\Cholesky\LLT_LAPACKE.h" />
+    <ClInclude Include="dependencies\Eigen\src\CholmodSupport\CholmodSupport.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AltiVec\Complex.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AltiVec\MathFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AltiVec\MatrixProduct.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AltiVec\MatrixProductCommon.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AltiVec\MatrixProductMMA.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AltiVec\PacketMath.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AVX512\Complex.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AVX512\MathFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AVX512\PacketMath.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AVX512\TypeCasting.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AVX\Complex.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AVX\MathFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AVX\PacketMath.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\AVX\TypeCasting.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\CUDA\Complex.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\Default\BFloat16.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\Default\ConjHelper.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\Default\GenericPacketMathFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\Default\GenericPacketMathFunctionsFwd.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\Default\Half.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\Default\Settings.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\Default\TypeCasting.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\GPU\MathFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\GPU\PacketMath.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\GPU\TypeCasting.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\HIP\hcc\math_constants.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\MSA\Complex.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\MSA\MathFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\MSA\PacketMath.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\NEON\Complex.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\NEON\GeneralBlockPanelKernel.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\NEON\MathFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\NEON\PacketMath.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\NEON\TypeCasting.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\SSE\Complex.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\SSE\MathFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\SSE\PacketMath.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\SSE\TypeCasting.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\SVE\MathFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\SVE\PacketMath.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\SVE\TypeCasting.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\SYCL\InteropHeaders.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\SYCL\MathFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\SYCL\PacketMath.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\SYCL\SyclMemoryModel.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\SYCL\TypeCasting.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\ZVector\Complex.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\ZVector\MathFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\arch\ZVector\PacketMath.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\ArithmeticSequence.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Array.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\ArrayBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\ArrayWrapper.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Assign.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\AssignEvaluator.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Assign_MKL.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\BandMatrix.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Block.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\BooleanRedux.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\CommaInitializer.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\ConditionEstimator.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\CoreEvaluators.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\CoreIterators.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\CwiseBinaryOp.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\CwiseNullaryOp.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\CwiseTernaryOp.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\CwiseUnaryOp.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\CwiseUnaryView.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\DenseBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\DenseCoeffsBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\DenseStorage.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Diagonal.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\DiagonalMatrix.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\DiagonalProduct.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Dot.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\EigenBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\ForceAlignedAccess.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\functors\AssignmentFunctors.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\functors\BinaryFunctors.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\functors\NullaryFunctors.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\functors\StlFunctors.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\functors\TernaryFunctors.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\functors\UnaryFunctors.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Fuzzy.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\GeneralProduct.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\GenericPacketMath.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\GlobalFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\IndexedView.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Inverse.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\IO.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Map.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\MapBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\MathFunctions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\MathFunctionsImpl.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Matrix.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\MatrixBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\NestByValue.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\NoAlias.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\NumTraits.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\PartialReduxEvaluator.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\PermutationMatrix.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\PlainObjectBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Product.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\ProductEvaluators.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\GeneralBlockPanelKernel.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\GeneralMatrixMatrix.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\GeneralMatrixMatrixTriangular.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\GeneralMatrixMatrixTriangular_BLAS.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\GeneralMatrixMatrix_BLAS.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\GeneralMatrixVector.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\GeneralMatrixVector_BLAS.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\Parallelizer.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\SelfadjointMatrixMatrix.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\SelfadjointMatrixMatrix_BLAS.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\SelfadjointMatrixVector.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\SelfadjointMatrixVector_BLAS.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\SelfadjointProduct.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\SelfadjointRank2Update.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\TriangularMatrixMatrix.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\TriangularMatrixMatrix_BLAS.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\TriangularMatrixVector.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\TriangularMatrixVector_BLAS.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\TriangularSolverMatrix.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\TriangularSolverMatrix_BLAS.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\products\TriangularSolverVector.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Random.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Redux.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Ref.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Replicate.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Reshaped.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\ReturnByValue.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Reverse.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Select.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\SelfAdjointView.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\SelfCwiseBinaryOp.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Solve.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\SolverBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\SolveTriangular.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\StableNorm.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\StlIterators.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Stride.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Swap.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Transpose.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Transpositions.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\TriangularMatrix.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\BlasUtil.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\ConfigureVectorization.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\Constants.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\DisableStupidWarnings.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\ForwardDeclarations.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\IndexedViewHelper.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\IntegralConstant.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\Macros.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\Memory.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\Meta.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\MKL_support.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\NonMPL2.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\ReenableStupidWarnings.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\ReshapedHelper.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\StaticAssert.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\SymbolicIndex.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\util\XprHelper.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\VectorBlock.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\VectorwiseOp.h" />
+    <ClInclude Include="dependencies\Eigen\src\Core\Visitor.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\ComplexEigenSolver.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\ComplexSchur.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\ComplexSchur_LAPACKE.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\EigenSolver.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\GeneralizedEigenSolver.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\GeneralizedSelfAdjointEigenSolver.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\HessenbergDecomposition.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\MatrixBaseEigenvalues.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\RealQZ.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\RealSchur.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\RealSchur_LAPACKE.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\SelfAdjointEigenSolver.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\SelfAdjointEigenSolver_LAPACKE.h" />
+    <ClInclude Include="dependencies\Eigen\src\Eigenvalues\Tridiagonalization.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\AlignedBox.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\AngleAxis.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\arch\Geometry_SIMD.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\EulerAngles.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\Homogeneous.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\Hyperplane.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\OrthoMethods.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\ParametrizedLine.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\Quaternion.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\Rotation2D.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\RotationBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\Scaling.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\Transform.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\Translation.h" />
+    <ClInclude Include="dependencies\Eigen\src\Geometry\Umeyama.h" />
+    <ClInclude Include="dependencies\Eigen\src\Householder\BlockHouseholder.h" />
+    <ClInclude Include="dependencies\Eigen\src\Householder\Householder.h" />
+    <ClInclude Include="dependencies\Eigen\src\Householder\HouseholderSequence.h" />
+    <ClInclude Include="dependencies\Eigen\src\IterativeLinearSolvers\BasicPreconditioners.h" />
+    <ClInclude Include="dependencies\Eigen\src\IterativeLinearSolvers\BiCGSTAB.h" />
+    <ClInclude Include="dependencies\Eigen\src\IterativeLinearSolvers\ConjugateGradient.h" />
+    <ClInclude Include="dependencies\Eigen\src\IterativeLinearSolvers\IncompleteCholesky.h" />
+    <ClInclude Include="dependencies\Eigen\src\IterativeLinearSolvers\IncompleteLUT.h" />
+    <ClInclude Include="dependencies\Eigen\src\IterativeLinearSolvers\IterativeSolverBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\IterativeLinearSolvers\LeastSquareConjugateGradient.h" />
+    <ClInclude Include="dependencies\Eigen\src\IterativeLinearSolvers\SolveWithGuess.h" />
+    <ClInclude Include="dependencies\Eigen\src\Jacobi\Jacobi.h" />
+    <ClInclude Include="dependencies\Eigen\src\KLUSupport\KLUSupport.h" />
+    <ClInclude Include="dependencies\Eigen\src\LU\arch\InverseSize4.h" />
+    <ClInclude Include="dependencies\Eigen\src\LU\Determinant.h" />
+    <ClInclude Include="dependencies\Eigen\src\LU\FullPivLU.h" />
+    <ClInclude Include="dependencies\Eigen\src\LU\InverseImpl.h" />
+    <ClInclude Include="dependencies\Eigen\src\LU\PartialPivLU.h" />
+    <ClInclude Include="dependencies\Eigen\src\LU\PartialPivLU_LAPACKE.h" />
+    <ClInclude Include="dependencies\Eigen\src\MetisSupport\MetisSupport.h" />
+    <ClInclude Include="dependencies\Eigen\src\misc\blas.h" />
+    <ClInclude Include="dependencies\Eigen\src\misc\Image.h" />
+    <ClInclude Include="dependencies\Eigen\src\misc\Kernel.h" />
+    <ClInclude Include="dependencies\Eigen\src\misc\lapack.h" />
+    <ClInclude Include="dependencies\Eigen\src\misc\lapacke.h" />
+    <ClInclude Include="dependencies\Eigen\src\misc\lapacke_mangling.h" />
+    <ClInclude Include="dependencies\Eigen\src\misc\RealSvd2x2.h" />
+    <ClInclude Include="dependencies\Eigen\src\OrderingMethods\Amd.h" />
+    <ClInclude Include="dependencies\Eigen\src\OrderingMethods\Eigen_Colamd.h" />
+    <ClInclude Include="dependencies\Eigen\src\OrderingMethods\Ordering.h" />
+    <ClInclude Include="dependencies\Eigen\src\PardisoSupport\PardisoSupport.h" />
+    <ClInclude Include="dependencies\Eigen\src\PaStiXSupport\PaStiXSupport.h" />
+    <ClInclude Include="dependencies\Eigen\src\plugins\ArrayCwiseBinaryOps.h" />
+    <ClInclude Include="dependencies\Eigen\src\plugins\ArrayCwiseUnaryOps.h" />
+    <ClInclude Include="dependencies\Eigen\src\plugins\BlockMethods.h" />
+    <ClInclude Include="dependencies\Eigen\src\plugins\CommonCwiseBinaryOps.h" />
+    <ClInclude Include="dependencies\Eigen\src\plugins\CommonCwiseUnaryOps.h" />
+    <ClInclude Include="dependencies\Eigen\src\plugins\IndexedViewMethods.h" />
+    <ClInclude Include="dependencies\Eigen\src\plugins\MatrixCwiseBinaryOps.h" />
+    <ClInclude Include="dependencies\Eigen\src\plugins\MatrixCwiseUnaryOps.h" />
+    <ClInclude Include="dependencies\Eigen\src\plugins\ReshapedMethods.h" />
+    <ClInclude Include="dependencies\Eigen\src\QR\ColPivHouseholderQR.h" />
+    <ClInclude Include="dependencies\Eigen\src\QR\ColPivHouseholderQR_LAPACKE.h" />
+    <ClInclude Include="dependencies\Eigen\src\QR\CompleteOrthogonalDecomposition.h" />
+    <ClInclude Include="dependencies\Eigen\src\QR\FullPivHouseholderQR.h" />
+    <ClInclude Include="dependencies\Eigen\src\QR\HouseholderQR.h" />
+    <ClInclude Include="dependencies\Eigen\src\QR\HouseholderQR_LAPACKE.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCholesky\SimplicialCholesky.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCholesky\SimplicialCholesky_impl.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\AmbiVector.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\CompressedStorage.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\ConservativeSparseSparseProduct.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\MappedSparseMatrix.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseAssign.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseBlock.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseColEtree.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseCompressedBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseCwiseBinaryOp.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseCwiseUnaryOp.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseDenseProduct.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseDiagonalProduct.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseDot.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseFuzzy.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseMap.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseMatrix.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseMatrixBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparsePermutation.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseProduct.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseRedux.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseRef.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseSelfAdjointView.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseSolverBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseSparseProductWithPruning.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseTranspose.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseTriangularView.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseUtil.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseVector.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\SparseView.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseCore\TriangularSolver.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLUImpl.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_column_bmod.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_column_dfs.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_copy_to_ucol.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_gemm_kernel.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_heap_relax_snode.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_kernel_bmod.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_Memory.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_panel_bmod.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_panel_dfs.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_pivotL.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_pruneL.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_relax_snode.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_Structs.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_SupernodalMatrix.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseLU\SparseLU_Utils.h" />
+    <ClInclude Include="dependencies\Eigen\src\SparseQR\SparseQR.h" />
+    <ClInclude Include="dependencies\Eigen\src\SPQRSupport\SuiteSparseQRSupport.h" />
+    <ClInclude Include="dependencies\Eigen\src\StlSupport\details.h" />
+    <ClInclude Include="dependencies\Eigen\src\StlSupport\StdDeque.h" />
+    <ClInclude Include="dependencies\Eigen\src\StlSupport\StdList.h" />
+    <ClInclude Include="dependencies\Eigen\src\StlSupport\StdVector.h" />
+    <ClInclude Include="dependencies\Eigen\src\SuperLUSupport\SuperLUSupport.h" />
+    <ClInclude Include="dependencies\Eigen\src\SVD\BDCSVD.h" />
+    <ClInclude Include="dependencies\Eigen\src\SVD\JacobiSVD.h" />
+    <ClInclude Include="dependencies\Eigen\src\SVD\JacobiSVD_LAPACKE.h" />
+    <ClInclude Include="dependencies\Eigen\src\SVD\SVDBase.h" />
+    <ClInclude Include="dependencies\Eigen\src\SVD\UpperBidiagonalization.h" />
+    <ClInclude Include="dependencies\Eigen\src\UmfPackSupport\UmfPackSupport.h" />
+    <ClInclude Include="dependencies\fdeep\base64.hpp" />
+    <ClInclude Include="dependencies\fdeep\common.hpp" />
+    <ClInclude Include="dependencies\fdeep\convolution.hpp" />
+    <ClInclude Include="dependencies\fdeep\convolution3d.hpp" />
+    <ClInclude Include="dependencies\fdeep\depthwise_convolution.hpp" />
+    <ClInclude Include="dependencies\fdeep\fdeep.hpp" />
+    <ClInclude Include="dependencies\fdeep\filter.hpp" />
+    <ClInclude Include="dependencies\fdeep\import_model.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\activation_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\additive_attention_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\add_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\attention_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\average_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\average_pooling_3d_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\batch_normalization_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\bidirectional_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\category_encoding_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\centercrop_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\concatenate_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\conv_2d_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\cropping_3d_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\dense_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\depthwise_conv_2d_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\dot_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\elu_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\embedding_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\exponential_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\flatten_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\gelu_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\global_average_pooling_3d_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\global_max_pooling_3d_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\global_pooling_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\gru_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\hard_sigmoid_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\input_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\leaky_relu_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\linear_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\lstm_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\maximum_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\max_pooling_3d_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\minimum_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\model_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\multiply_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\normalization_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\permute_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\pooling_3d_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\prelu_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\relu_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\repeat_vector_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\rescaling_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\reshape_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\resizing_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\selu_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\separable_conv_2d_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\sigmoid_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\softmax_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\softplus_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\softsign_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\subtract_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\swish_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\tanh_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\time_distributed_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\upsampling_1d_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\upsampling_2d_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\layers\zero_padding_3d_layer.hpp" />
+    <ClInclude Include="dependencies\fdeep\model.hpp" />
+    <ClInclude Include="dependencies\fdeep\node.hpp" />
+    <ClInclude Include="dependencies\fdeep\recurrent_ops.hpp" />
+    <ClInclude Include="dependencies\fdeep\shape2.hpp" />
+    <ClInclude Include="dependencies\fdeep\shape3.hpp" />
+    <ClInclude Include="dependencies\fdeep\tensor.hpp" />
+    <ClInclude Include="dependencies\fdeep\tensor_pos.hpp" />
+    <ClInclude Include="dependencies\fdeep\tensor_shape.hpp" />
+    <ClInclude Include="dependencies\fdeep\tensor_shape_variable.hpp" />
+    <ClInclude Include="dependencies\fplus\fplus.hpp" />
+    <ClInclude Include="dependencies\nlohmann\json.hpp" />
+    <ClInclude Include="dependencies\nlohmann\json_fwd.hpp" />
+    <CustomBuild Include="slextracesvrform.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOCing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)generatedfiles/moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOCing %(Filename)%(Extension)...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\osal\qt\bin\moc.exe" "%(FullPath)" -o "%(RootDir)%(Directory)generatedfiles/moc_%(Filename).cpp"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\moc_%(Filename).cpp;%(Outputs)</Outputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="sample.xml">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copy  "%(FullPath)" "$(TargetDir)%(Filename).xml"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy  "%(FullPath)" "$(TargetDir)%(Filename).xml"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TargetDir)%(Filename).xml;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copy  "%(FullPath)" "$(TargetDir)%(Filename).xml"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy  "%(FullPath)" "$(TargetDir)%(Filename).xml"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TargetDir)%(Filename).xml;%(Outputs)</Outputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+    <CustomBuild Include="slextracesvrdialog.xml">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Converting %(Filename)%(Extension)... to $(TargetDir)%(Filename).hmi</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\base\slhmiconvertercmd.exe" -in "%(FullPath)" -out "$(TargetDir)%(Filename).hmi" -converter slgfwconverter.SlGfwDialogConverter
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TargetDir)%(Filename).hmi;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Converting %(Filename)%(Extension)... to $(TargetDir)%(Filename).hmi</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(HMI_SL_PP_SUBST)hmisl\siemens\sinumerik\hmi\base\slhmiconvertercmd.exe" -in "%(FullPath)" -out "$(TargetDir)%(Filename).hmi" -converter slgfwconverter.SlGfwDialogConverter
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TargetDir)%(Filename).hmi;%(Outputs)</Outputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="slextracesvr.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+    <None Include="slextracesvrdialog.pro" />
+    <CustomBuild Include="systemconfiguration.ini">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copy  "%(FullPath)" "$(TargetDir)%(Filename).ini"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy  "%(FullPath)" "$(ProjectDir)$(Configuration)\Output\cfg/%(Filename).ini"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TargetDir)%(Filename).ini;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copy  "%(FullPath)" "$(TargetDir)%(Filename).ini"</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy  "%(FullPath)" "$(ProjectDir)$(Configuration)\Output\cfg/%(Filename).ini"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TargetDir)%(Filename).ini;%(Outputs)</Outputs>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</VerifyInputsAndOutputsExist>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

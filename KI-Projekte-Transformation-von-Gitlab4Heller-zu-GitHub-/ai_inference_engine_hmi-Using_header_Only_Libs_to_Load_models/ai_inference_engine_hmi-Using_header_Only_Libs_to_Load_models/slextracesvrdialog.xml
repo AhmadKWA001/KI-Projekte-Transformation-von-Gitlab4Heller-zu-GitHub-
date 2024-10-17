@@ -1,0 +1,23 @@
+<!DOCTYPE HMI_DIALOG_CONFIGURATION>
+<DIALOGUI implementation="slgfw.SlGfwHmiDialog"
+		  defaultscreen="screenMain"
+		  screenlayout="slstandardscreenlayout.SlStandardScreenLayout"
+		  panellayout="StandardLayout">
+
+  <SCREEN name="screenMain">
+    <FORM implementation="slextracesvr.SlExTraceSvrForm" name="SlExTraceSvrForm" formpanel="FullForm"/>
+    <MENU name="hu" softkeybar="hu">
+      <SOFTKEY position="1">
+        <PROPERTY name="textID" type="QString">Start</PROPERTY>
+        <PROPERTY name="disabledFace" type="SoftKeyDisabledFace">Grayed</PROPERTY>
+        <FUNCTION name="myStartPrediction" args="" />
+      </SOFTKEY>
+      <SOFTKEY position="2">
+        <PROPERTY name="textID" type="QString">Stop</PROPERTY>
+        <PROPERTY name="disabledFace" type="SoftKeyDisabledFace">Grayed</PROPERTY>
+        <FUNCTION name="myStopPrediction" args="" />
+      </SOFTKEY>
+    </MENU>
+    <RECALL />
+  </SCREEN>
+</DIALOGUI>

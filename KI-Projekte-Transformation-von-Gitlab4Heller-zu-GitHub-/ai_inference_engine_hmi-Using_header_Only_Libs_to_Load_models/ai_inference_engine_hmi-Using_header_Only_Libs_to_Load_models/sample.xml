@@ -1,0 +1,18 @@
+<traceCaptureSetup_V20>
+ <collectionSettings endless="false" autoRestart="false" appendData="false" atCapacity="discard" capacity="71680" deferOffload="false" powerOnStart="false" timeLimit="10.0000"/>
+ <sessionSettings expirationPeriod="0" clientPrivilegeRead="password" clientPrivilegeManage="exclusive" sessionName="SampleSession" archiveSetting="NCU"/>
+ <sampleRateSettings servoSampleRate="0.00200" driveSampleRate1="0.000125" ipo2SampleRate="0.00800" ipo1SampleRate="0.00800"/>
+ <signalSettings>
+  <signal dataType="double" displayRes="5" domain="NCU_1" eventChannel="1" name="/Channel/!RP/rpa [u1, 1]" unitsType="none" key="s1" event="1" description="R-Parameter "/>
+  <signal dataType="double" displayRes="5" domain="NCU_1" eventChannel="1" name="/Channel/!RP/rpa [u1, 2]" unitsType="none" key="s2" event="1" description="R-Parameter "/>
+  <signal dataType="double" displayRes="5" domain="NCU_1" eventChannel="1" name="/Channel/!RP/rpa [u1, 3]" unitsType="none" key="s3" event="1" description="R-Parameter "/>
+ </signalSettings>
+ <triggerSettings useStopTrigger="false" useStartTrigger="false">
+  <startTrigger patternTimeLimit="0.0100" combineLogic="and" delay="0.0000" patternQualifier="entered" repeatCount="1">
+   <triggerCondition dataType="none" displayRes="0" mode="equalTo" level="0" level2="0.0" domain="" eventChannel="1" name="" key="t1" event="1" description="" bitMask="00000000"/>
+  </startTrigger>
+  <stopTrigger patternTimeLimit="0.0100" combineLogic="and" delay="0.5000" patternQualifier="entered" repeatCount="1">
+   <triggerCondition dataType="none" displayRes="0" mode="equalTo" level="0" level2="0.0" domain="" eventChannel="1" name="" key="t1" event="1" description="" bitMask="00000000"/>
+  </stopTrigger>
+ </triggerSettings>
+</traceCaptureSetup_V20>
