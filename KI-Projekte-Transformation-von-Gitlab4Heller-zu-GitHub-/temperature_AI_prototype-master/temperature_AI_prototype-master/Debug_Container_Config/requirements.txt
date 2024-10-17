@@ -1,0 +1,13 @@
+tensorflow-cpu
+ptvsd
+pymongo
+requests
+pydevd
+pydevd-pycharm
+numpy
+pandas
+scikit-learn
+seaborn
+matplotlib
+jupyter
+onnxruntime

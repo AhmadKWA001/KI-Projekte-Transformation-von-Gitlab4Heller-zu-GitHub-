@@ -1,0 +1,17 @@
+build
+/venv/
+/.vscode-server/
+/EdgeAPI/
+/model.p/
+/.bash_logout
+/.bashrc
+/.profile
+/appconfig.json
+/model.keras
+/appsdk-project.yaml
+/cyclic_runner.py
+/model.h5
+/model.onnx
+/ReadMe.md
+/.idea
+/.idea

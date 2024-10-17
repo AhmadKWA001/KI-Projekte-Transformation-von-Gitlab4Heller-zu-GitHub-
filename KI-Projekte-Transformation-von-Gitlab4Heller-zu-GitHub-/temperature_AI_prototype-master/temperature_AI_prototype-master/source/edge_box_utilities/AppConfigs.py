@@ -1,0 +1,22 @@
+class AppConfigs:
+    show_debugprints= None
+    recording_frequency= None
+    response_time= None
+    time_relevance= None
+    preprocessor= None
+    model= None
+    shape= None
+    period= None
+    model_version= None
+    make_prediction= True
+    write_to_db= None
+    preprocessor_version= None
+    time2run= None
+    inputsignal_list= None
+    parameter_dict= None
+    legacy= None
+    database_uri= None#"mongodb://mongodb.h4i_hsi:27017/"
+    database = None#"h4ai"
+    collection = None#"modelLogs"
+    device_parameter_address= None#"/nc/_n_nc_tea_acx/$mn_oem_global_info[u1]"
+    prediction_write_address= None#"/NCK/State/aDbr[1212]"

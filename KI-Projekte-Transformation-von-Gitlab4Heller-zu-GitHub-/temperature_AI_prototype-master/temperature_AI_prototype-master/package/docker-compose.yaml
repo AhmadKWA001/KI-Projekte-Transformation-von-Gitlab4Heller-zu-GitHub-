@@ -1,0 +1,13 @@
+networks:
+  indapp-net:
+    driver: bridge
+services:
+  Temperature_AI:
+    build: .
+    networks:
+    - indapp-net
+    volumes:
+    - /etc/config/indapps/Temperature_AI:/etc/runtime/config
+    - /var/run/systemd/journal/socket:/var/run/systemd/journal/socket
+version: '2'
+l

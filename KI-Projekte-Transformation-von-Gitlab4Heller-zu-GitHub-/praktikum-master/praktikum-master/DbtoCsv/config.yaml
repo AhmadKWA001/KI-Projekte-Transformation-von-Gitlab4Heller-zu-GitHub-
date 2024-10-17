@@ -1,0 +1,22 @@
+---
+host: M57002edge
+port: 27017
+collection: modelLogs
+start: 2023-09-12T13:55:00.000+0000
+end: 2023-09-13T01:00:00.000+0000
+timeshift: 1 # DB is in UTC time, for summertime: 2, wintertime: 1
+save_path: X:\\KI Praktikum\\validate_Data\\2023_08_23_filtered_data\\Versuch11_09_2023_M7_M8_M121_iso_5s.csv
+show_save: False # True: Plot the data read from the database and then define 
+                # needed timeframe via terminal
+                # False: Use timeframe provided here directly, doesn't plot
+---
+host: M57002edge
+port: 27017
+collection: modelLogs
+start: 2023-09-11T22:55:00.000+0000
+end: 2023-09-12T09:36:00.000+0000
+timeshift: 1 # DB is in UTC time, for summertime: 2, wintertime: 1
+save_path: X:\\KI Praktikum\\validate_Data\\2023_08_23_filtered_data\\Versuch11_09_2023_M7_M8_M127_iso_5s.csv
+show_save: False # True: Plot the data read from the database and then define 
+                # needed timeframe via terminal
+                # False: Use timeframe provided here directly, doesn't plot

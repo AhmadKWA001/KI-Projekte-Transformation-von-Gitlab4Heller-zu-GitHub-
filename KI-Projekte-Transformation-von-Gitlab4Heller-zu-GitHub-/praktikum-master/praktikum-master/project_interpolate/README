@@ -1,0 +1,12 @@
+README project_interpolate
+The script adds a column ('welle_z_ipo') with interpolated values of 'welle_z' 
+to the input dataframe.
+The filepath where the original csv-file was saved and the filepath of the
+dataframe with the interpolated values needs to be provided.
+This can either be done as input in the terminal or
+via the config file.
+The expected format in the config file is:
+
+---
+filepath: X:\path\path\file.csv
+ipofilepath: X:\path\path\interpolated_file.csv

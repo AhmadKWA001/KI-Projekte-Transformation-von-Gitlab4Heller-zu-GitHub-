@@ -1,0 +1,11 @@
+---
+df_machine_host: m53763edge
+df_machine_port: 27017
+df_machine_collection: thermal_data
+start_machine: 2023-09-07T08:40:00.000+0000
+end_machine: 2023-09-08T06:53:00.000+0000
+df_magnet_path: C:\Users\wch002\Desktop\RotorTempDRZ\S3ED60_n_700_1_min.csv
+combined_path: C:\Users\wch002\Desktop\RotorTempDRZ\combined\synchronized_2023_09_07_Rotor_combined.csv
+timeshift: 1
+
+ 

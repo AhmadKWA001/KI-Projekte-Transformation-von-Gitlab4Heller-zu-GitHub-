@@ -1,0 +1,11 @@
+README Dbtocsv
+Project can be used to extract data from a database and save it into a csv file
+Expected input either via the terminal or a csv-file:
+  Parameters of the database:
+    host, port, collection
+  start, end -> defines timeframe which should be extracted and visualized or directly saved
+  timeshift -> DB is in UTC time, for summertime +1
+  save_path -> path where the finished csv file should be saved
+  show_save -> Bool: If True: Plot the data read from the database and then define 
+                              the needed timeframe via terminal
+                     If False: Use timeframe provided here directly, doesn't plot

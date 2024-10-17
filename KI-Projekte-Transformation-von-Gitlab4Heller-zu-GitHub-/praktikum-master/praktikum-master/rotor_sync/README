@@ -1,0 +1,22 @@
+README rotor_sync
+The script can be used to synchronize data collected in a database
+with the magnet temperatures collected in a csv file.
+You can either type in all the needed information in the terminal
+or provide the information via the config file.
+Every block specified in the config file will be handled 
+independently. For each either a folder with several csv-files 
+containing the temperature data or a specific csv-file can be 
+provided.
+For summertime, timeshift must be 1, for wintertime 2.
+
+
+Example of the expected config format:
+---
+df_machine_host: m53763edge
+df_machine_port: 27017
+df_machine_collection: thermal_data
+start_machine: 2023-09-06T07:20:00.000+0000
+end_machine: 2023-09-07T07:30:00.000+0000
+df_magnet_path: C:\\Users\\wch002\\Desktop\\RotorTempDRZ\\Dauerlauf_S3_ED40_800_Umin.csv
+combined_path: C:\\Users\\wch002\\Desktop\\RotorTempDRZ\\combined\\synchronized_2023_06_01_Rotor_combined_test_2.csv
+timeshift: 1
